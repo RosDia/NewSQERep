@@ -9,7 +9,7 @@ import { expect, browser, $ } from '@wdio/globals'
         expect(pageTiile).toEqual("EPAM | Software Engineering & Product Development Services");
     });
 
-    it("Theme switch test", async ()=> {
+    it("Check the ability to switch Light / Dark mode", async ()=> {
         await browser.url("https://www.epam.com/");
 
         const acceptCookiesbutton = await $("/html/body/div/div[5]/div[2]/div/div[1]/div/div[2]/div/button[2]");
@@ -29,7 +29,7 @@ import { expect, browser, $ } from '@wdio/globals'
         expect (lightThemeLabel).toExist(); 
     });
 
-    it("Change language to UA", async ()=> {
+    it("Check that allow to change language to UA", async ()=> {
         await browser.url("https://www.epam.com/");
 
         const acceptCookiesbutton = await $("/html/body/div/div[5]/div[2]/div/div[1]/div/div[2]/div/button[2]");
@@ -48,7 +48,7 @@ import { expect, browser, $ } from '@wdio/globals'
         // expect(pageTiile).toEqual("EPAM | Унікальні можливості роботи для ІТ-професіоналів та молодих спеціалістів");
     });
 
-    it("Policy List test", async ()=> {
+    it("Check the policies list", async ()=> {
         await browser.url("https://www.epam.com/");
 
         const acceptCookiesbutton = await $("/html/body/div/div[5]/div[2]/div/div[1]/div/div[2]/div/button[2]");
@@ -74,7 +74,7 @@ import { expect, browser, $ } from '@wdio/globals'
         expect(rightLinks).toHaveTextContaining('WEB ACCESSIBILITY');
     });
 
-    it("Location switch test", async ()=> {
+    it("Check that allow to switch location list by region", async ()=> {
         await browser.url("https://www.epam.com/");
 
         const acceptCookiesbutton = await $("/html/body/div/div[5]/div[2]/div/div[1]/div/div[2]/div/button[2]");
@@ -93,7 +93,7 @@ import { expect, browser, $ } from '@wdio/globals'
         apacLabel.click;        
     });
 
-    it("Search test", async ()=> {
+    it("Check the search function", async ()=> {
         await browser.url("https://www.epam.com/");
         const acceptCookiesbutton = await $("/html/body/div/div[5]/div[2]/div/div[1]/div/div[2]/div/button[2]");
         const searchbutton = await $("//div[2]/div[1]/header/div/div/ul/li[3]/div/button/span[1]");
@@ -112,7 +112,7 @@ import { expect, browser, $ } from '@wdio/globals'
         expect(searchResultItems.isExisting());
     });
 
-    it("Required fields validation test", async ()=> {
+    it("Chack form's fields validation", async ()=> {
         await browser.url("https://www.epam.com/about/who-we-are/contact");
         const submitButton = await $("button.button-ui");
 
@@ -121,7 +121,7 @@ import { expect, browser, $ } from '@wdio/globals'
     });
 
 
-    // it("Home page redirection test", async ()=> {
+    // it("Check tha the Company logo on the header lead to the main page", async ()=> {
     //     await browser.url("https://www.epam.com/about");
     //     const logo = await $("//div[2]/div[2]/div/div/header/div/div/a[3]/img[3]");
 
@@ -133,7 +133,7 @@ import { expect, browser, $ } from '@wdio/globals'
     //     // expect(pageTiile).toEqual("EPAM | Software Engineering & Product Development Services");
     // });
 
-//     it("Overview Dowload test", async ()=> {
+//     it("Check that allows to download report ", async ()=> {
 //         await browser.url("https://www.epam.com/about");
 //         const downloadButton = await $("//div[1]/div[5]/section/div[2]/div/div/div[1]/div/div[3]/div/a/span/span[2]");
 
